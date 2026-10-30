@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.4.3
+
+Surgido de comparar B2B-120 con la implementación de una persona del
+equipo: el spec dejó afuera una ruta del alcance sin preguntarlo, y nadie
+actualizó el README.
+
+### Cambiado
+
+- `add-feature` pide, junto con `sdd`, el contexto que el ticket no trae
+  (contratos, decisiones, documentos sin enlazar) y lo guarda en
+  `research-<TICKET>.md` bajo `## Contexto del humano`.
+- spec-author: todo punto del alcance que el spec no cubre va en "Para
+  decidir"; nunca se deja afuera en silencio. `approval.md` suma la línea
+  **Supuestos** (lo que asumió por falta de contexto).
+- `design.md` lleva siempre la sección **Documentación** (README,
+  contrato de la API) con su task, o "ninguna".
+
+Cambian `skills/add-feature`, `agents/spec-author.md` y `docs/specs.md`:
+en un harness 0.4.2 instalado alcanza con copiar `docs/specs.md` y
+`VERSION`.
+
 ## 0.4.2
 
 ### Corregido

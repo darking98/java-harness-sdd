@@ -44,8 +44,13 @@ Máximo 15 líneas, sin repetir el spec:
 **Diseño:** <las 2-4 decisiones que importan, con la alternativa descartada>
 **Riesgos:** <lo que puede salir mal o roza la arquitectura; "ninguno" si no hay>
 **Para decidir:** <preguntas abiertas que bloquean la aprobación; "nada" si no hay>
+**Supuestos:** <lo que no sabía y asumió: "sin el contrato, asumí X"; "ninguno" si no hay>
 **Tamaño:** <n> requirements, <m> tasks, <archivos aprox.>
 ```
+
+"Para decidir" incluye, sí o sí, todo punto del alcance del ticket (o de
+`research-<TICKET>.md`) que el spec no cubre: dejar algo afuera es una
+decisión del humano, no del spec-author.
 
 El validador exige que exista mientras la feature está en `spec_ready`.
 
@@ -189,6 +194,9 @@ que no, en una línea: "Persistencia: ninguna"):
 - **Configuración**: propiedades nuevas y en qué perfiles.
 - **Persistencia**: migraciones nuevas (nombre del archivo) o "ninguna".
 - **Dependencias nuevas**: cuál y por qué, o "ninguna".
+- **Documentación**: qué hay que actualizar en el repo (README, contrato
+  de la API, ejemplos de configuración) y una task que lo haga, o
+  "ninguna".
 - **Alternativa descartada** y por qué (mínimo una).
 - **Impacto en ArchUnit**: "ninguno" o qué regla nueva conviene agregar.
 

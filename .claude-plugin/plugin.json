@@ -1,7 +1,7 @@
 {
   "name": "java-harness-sdd",
   "description": "Harness Spec Driven Development para servicios Java/Spring con arquitectura hexagonal: agentes spec-author/implementer/reviewer, hooks de verificación con Gradle o Maven y un estado local (.harness/) que nunca se commitea.",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "license": "MIT",
   "author": {
     "name": "Diego Rodriguez"

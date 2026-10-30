@@ -49,12 +49,18 @@ línea de salida.
    secretos), agregá los requirements "no deseados" que apliquen: timeout,
    indisponibilidad, respuesta inválida, duplicado.
 5. Redactá `design.md` con las secciones de `.harness/docs/specs.md` que
-   aplican; las que no, en una línea.
+   aplican; las que no, en una línea. "Documentación" siempre: si la
+   feature cambia algo que el README u otro doc del repo describe, va una
+   task para actualizarlo.
 6. Redactá `tasks.md`: de adentro hacia afuera, cada task `- [ ] T<n>` con
    `Cubre: R<n>` y su test.
 7. Redactá `approval.md` con el formato de `.harness/docs/specs.md`, en 15
-   líneas como máximo. Las decisiones abiertas van ahí: es lo único que el
-   humano lee seguro antes de aprobar.
+   líneas como máximo. Es lo único que el humano lee seguro antes de
+   aprobar, así que ahí van:
+   - en **Para decidir**, todo punto del alcance del ticket (o de
+     `research-<TICKET>.md`) que el spec no cubre, con tu recomendación;
+   - en **Supuestos**, cada decisión que depende de algo que no tenés (un
+     contrato, una definición de otro equipo): qué asumiste.
 8. **Revisá la consistencia vos mismo** antes de terminar (es lo que
    `init.sh` va a chequear): cada `A<k>` tiene un `R<n>`, cada `R<n>` tiene
    `Criterio:` y alguna task que lo cubre, ninguna task cita un `R<n>` que
@@ -65,6 +71,8 @@ línea de salida.
 
 - ❌ Nunca escribas fuera de `.harness/specs/` y tu
   `progress/spec-<TICKET>.md`.
+- ❌ No dejes afuera en silencio nada del alcance del ticket: o lo cubre un
+  `R<n>`, o va en "Para decidir".
 - ❌ No inventes requirements que el ticket no soporta. Si el `acceptance`
   es ambiguo o insuficiente, escribí las preguntas concretas en
   `.harness/progress/spec-<TICKET>.md` y terminá con `blocked`.

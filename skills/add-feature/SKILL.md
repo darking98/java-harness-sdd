@@ -44,9 +44,14 @@ Argumento: `$ARGUMENTS` — la clave del ticket (ej. `B2B-130`).
    dependencias), más allá de los criterios.
 4. Mostrale al humano la entrada propuesta, con los criterios numerados
    `A1`, `A2`, ... en el orden en que van a quedar (el spec los referencia
-   por ese número), y preguntale:
+   por ese número), y preguntale, en el mismo mensaje:
    - `"sdd": true` (pasa por spec: default para lógica nueva) o `false`
      (bump de dependencias, config, fix trivial).
+   - Si hay **contexto que el ticket no trae**: contratos, decisiones ya
+     tomadas, documentos o conversaciones que no están enlazados. Que pase
+     links, rutas o texto. Lo que dé va a `research-<TICKET>.md` bajo
+     `## Contexto del humano`, literal y con su origen (los links de
+     Jira/Confluence leelos con `twg`). Si no hay, se sigue.
    Agregala **solo** cuando confirme:
 
 ```json
