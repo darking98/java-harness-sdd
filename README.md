@@ -67,6 +67,10 @@ vive en disco:
 - **Spec breve:** cada cosa dicha una vez, código referenciado y no
   copiado, y un `approval.md` de 15 líneas para aprobar.
 
+Con 0.4.x, un ticket chico (9 requirements, 5 tasks) costó unos USD 4.60
+de punta a punta (ticket, spec, implementación, review aprobado en la
+primera vuelta y cierre), estimado a precio de lista de la API.
+
 ## Requisitos
 
 - **JDK 17 o más** en el PATH (el validador de `feature-list.json` corre
@@ -74,6 +78,9 @@ vive en disco:
   independiente de la versión con la que compila el proyecto.
 - `bash` (en Windows, Git Bash) y `git`.
 - Docker para la verificación completa si el repo usa Testcontainers.
+- Opcional: el CLI [`twg`](https://developer.atlassian.com/cloud/twg-cli/getting-started/installation/)
+  de Atlassian, autenticado (`twg login`), para que `add-feature` lea el
+  ticket de Jira y sus páginas de Confluence. Sin él, se pega el ticket.
 
 ## Uso
 
@@ -102,6 +109,15 @@ pending → [spec-author] → spec_ready → ⏸ "aprobado" │ /clear │ in_pr
 
 Una feature `"sdd": false` va directo a `deliver`. Para cambiar un spec:
 `/java-harness-sdd:spec B2B-130 <cambios>`.
+
+### Actualizar
+
+`/plugin` solo ofrece actualizar si cambió `version` en `plugin.json`. Con
+un marketplace de carpeta local: Marketplaces → `java-harness-sdd` →
+**Update marketplace**, después Update del plugin y `/reload-plugins`. Si
+el CHANGELOG no dice otra cosa, el `.harness/` instalado sigue sirviendo:
+basta con actualizar `.harness/VERSION` y los archivos que la entrada
+nombre.
 
 ## Verificación
 
