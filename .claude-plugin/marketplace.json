@@ -1,0 +1,14 @@
+{
+  "name": "java-harness-sdd",
+  "description": "Harness Spec Driven Development multi-agente para servicios Java/Spring con arquitectura hexagonal.",
+  "owner": {
+    "name": "Diego Rodriguez"
+  },
+  "plugins": [
+    {
+      "name": "java-harness-sdd",
+      "source": "./",
+      "description": "Harness Spec Driven Development para servicios Java/Spring con arquitectura hexagonal, instalado como estado local (.harness/) que nunca se commitea."
+    }
+  ]
+}

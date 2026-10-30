@@ -1,0 +1,6 @@
+# Los scripts corren en bash (también en Git Bash sobre Windows): CRLF los rompe.
+*.sh   text eol=lf
+*.conf text eol=lf
+*.java text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
